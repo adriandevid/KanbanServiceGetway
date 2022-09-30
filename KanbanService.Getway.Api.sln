@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanbanService.Getway.Api", "KanbanService.Getway.Api\KanbanService.Getway.Api.csproj", "{948EDB1B-3940-4EA0-A06F-2BE9114AB4FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{948EDB1B-3940-4EA0-A06F-2BE9114AB4FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{948EDB1B-3940-4EA0-A06F-2BE9114AB4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{948EDB1B-3940-4EA0-A06F-2BE9114AB4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{948EDB1B-3940-4EA0-A06F-2BE9114AB4FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D2AB1D1-694C-4594-A334-E19FDE5A7748}
+	EndGlobalSection
+EndGlobal

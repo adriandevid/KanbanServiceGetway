@@ -1,0 +1,20 @@
+﻿{
+  "GlobalConfiguration": {
+    "UseServiceDiscovery": true,
+    "ServiceDiscoveryProvider": {
+      "Type": "Consul",
+      "Host": "207.244.226.41",
+      "Port": 8500
+    }
+  },
+  "Routes": [
+    {
+      "LoadBalancer": "LeastConnection",
+      "DownstreamPathTemplate": "/projeto/",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/projeto/",
+      "ServiceName": "ProjetoService",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ]
+}
