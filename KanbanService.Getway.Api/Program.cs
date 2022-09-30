@@ -26,6 +26,15 @@ builder.Services.AddOcelot().AddConsul().AddCacheManager(x => x.WithDictionaryHa
 
 var app = builder.Build();
 
+///<summary>
+/// Validação para auto preservação
+/// </summary>
+app.MapGet("/health", () =>
+{
+    return "OK";
+})
+.WithName("health");
+
 app.UseSwagger();
 app.UseSwaggerUI();
 
