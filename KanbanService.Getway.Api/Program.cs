@@ -7,15 +7,19 @@ using ProjetoService.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration.SetBasePath(builder.Environment.ContentRootPath)
+    .AddJsonFile("ocelot.json", optional: false, reloadOnChange: true)
+    .AddEnvironmentVariables();
+
+builder.Services.AddOcelot(builder.Configuration);
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-builder.Configuration.AddJsonFile("ocelot.json", false, true);
 
 builder.Services.AddSingleton<IHostedService, ServiceRecoverConfig>();
 builder.Services.Configure<GetwayConfiguration>(builder.Configuration.GetSection("GetwayService"));
 builder.Services.Configure<ConsulConfiguration>(builder.Configuration.GetSection("Consul"));
-builder.Services.AddOcelot().AddConsul().AddCacheManager(x => x.WithDictionaryHandle());
+builder.Services.AddOcelot(builder.Configuration).AddConsul().AddCacheManager(x => x.WithDictionaryHandle());
 
 var consulAddress = builder.Configuration.GetSection("Consul")["Url"];
 

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Meus sistemas\KanbanService.Getway.Api\KanbanService.Getway.Api\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2022-10-03T18:49:19.7182294Z;True|2022-10-03T15:46:43.0312615-03:00;False|2022-10-03T15:46:13.2072756-03:00;True|2022-10-03T15:39:36.4506794-03:00;True|2022-10-03T15:37:26.3741589-03:00;True|2022-10-03T15:34:33.6032176-03:00;True|2022-10-03T15:30:54.4640428-03:00;True|2022-10-03T14:09:24.3312595-03:00;True|2022-10-03T14:07:41.3616765-03:00;</History>
+  </PropertyGroup>
+</Project>
