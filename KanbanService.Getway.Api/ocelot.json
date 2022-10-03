@@ -1,10 +1,12 @@
 ﻿{
   "GlobalConfiguration": {
     "UseServiceDiscovery": true,
+    "RequestIdKey": "ApiGetway-1",
     "ServiceDiscoveryProvider": {
-      "Type": "Consul",
+      "Type": "PollConsul",
       "Host": "207.244.226.41",
-      "Port": 8500
+      "Port": 8500,
+      "PollingInterval": 100
     }
   },
   "Routes": [

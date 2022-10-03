@@ -10,9 +10,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Configuration.AddJsonFile("ocelot.json", false, true);
+
 builder.Services.AddSingleton<IHostedService, ServiceRecoverConfig>();
 builder.Services.Configure<GetwayConfiguration>(builder.Configuration.GetSection("GetwayService"));
 builder.Services.Configure<ConsulConfiguration>(builder.Configuration.GetSection("Consul"));
+builder.Services.AddOcelot().AddConsul().AddCacheManager(x => x.WithDictionaryHandle());
 
 var consulAddress = builder.Configuration.GetSection("Consul")["Url"];
 
@@ -21,7 +24,7 @@ builder.Services.AddSingleton<IConsulClient, ConsulClient>(provider =>
         config.Address = new Uri(consulAddress);
     }));
 
-builder.Services.AddOcelot().AddConsul().AddCacheManager(x => x.WithDictionaryHandle());
+
 
 
 var app = builder.Build();
