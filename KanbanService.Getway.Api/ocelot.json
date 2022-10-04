@@ -15,12 +15,6 @@
       "DownstreamScheme": "http",
       "UpstreamPathTemplate": "/api/projeto/",
       "ServiceName": "ProjetoService",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "207.244.226.40",
-          "Port": 8080
-        }
-      ],
       "UpstreamHttpMethod": [ "Get" ]
     }
   ]
