@@ -1,9 +1,9 @@
 ﻿{
   "GlobalConfiguration": {
     "UseServiceDiscovery": true,
-    "RequestIdKey": "ApiGetway-1",
+    "RequestIdKey": "ApiGetway",
     "ServiceDiscoveryProvider": {
-      "Type": "PollConsul",
+      "Type": "Consul",
       "Host": "207.244.226.41",
       "Port": 8500,
       "PollingInterval": 100
@@ -11,11 +11,16 @@
   },
   "Routes": [
     {
-      "LoadBalancer": "LeastConnection",
-      "DownstreamPathTemplate": "/projeto/",
+      "DownstreamPathTemplate": "/health/",
       "DownstreamScheme": "http",
       "UpstreamPathTemplate": "/api/projeto/",
       "ServiceName": "ProjetoService",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "207.244.226.40",
+          "Port": 8080
+        }
+      ],
       "UpstreamHttpMethod": [ "Get" ]
     }
   ]
