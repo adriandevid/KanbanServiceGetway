@@ -15,7 +15,20 @@
       "DownstreamScheme": "http",
       "UpstreamPathTemplate": "/api/projeto/",
       "ServiceName": "ProjetoService",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "SwaggerKey": "projeto"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "projeto",
+      "Config": [
+        {
+          "Name": "projeto API",
+          "Version": "v1",
+          "Url": "http://207.244.226.41:8080/swagger/v1/swagger.json"
+        }
+      ]
     }
   ]
 }
